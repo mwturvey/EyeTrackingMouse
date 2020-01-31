@@ -286,6 +286,8 @@ namespace eye_tracking_mouse
 
     public class InputManager : InputProvider.IInputReceiver
     {
+        private readonly YoutubeIndicationsWindow youtube_indications = new YoutubeIndicationsWindow();
+
         private readonly EyeTrackingMouse eye_tracking_mouse;
 
         private readonly InteractionHistoryEntry[] interaction_history = new InteractionHistoryEntry[3];
@@ -350,7 +352,10 @@ namespace eye_tracking_mouse
                     interaction_history[1].Key == key &&
                     (DateTime.Now - interaction_history[1].Time).TotalMilliseconds < Options.Instance.modifier_short_press_duration_ms;
 
-                return eye_tracking_mouse.OnKeyPressed(key, key_state, speed_up, is_short_modifier_press, is_repetition, is_modifier, input_provider);
+                bool handled = eye_tracking_mouse.OnKeyPressed(key, key_state, speed_up, is_short_modifier_press, is_repetition, is_modifier, input_provider);
+                if (handled)
+                    youtube_indications.OnKeyPressed(key, key_state, is_repetition);
+                return handled;
             }
         }
 
@@ -397,6 +402,7 @@ namespace eye_tracking_mouse
         public InputManager(EyeTrackingMouse eye_tracking_mouse)
         {
             this.eye_tracking_mouse = eye_tracking_mouse;
+            youtube_indications.Show();
             if (!UpdateInterceptionMethod())
             {
                 lock (Helpers.locker)

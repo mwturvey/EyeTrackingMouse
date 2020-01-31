@@ -21,7 +21,6 @@ namespace eye_tracking_mouse
     /// </summary>
     public partial class CalibrationWindow : Window
     {
-
         const int WS_EX_TRANSPARENT = 0x00000020;
         const int GWL_EXSTYLE = (-20);
 
