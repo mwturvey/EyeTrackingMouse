@@ -372,11 +372,20 @@ namespace eye_tracking_mouse
 
                 if (Options.Instance.key_bindings.interception_method == KeyBindings.InterceptionMethod.OblitaDriver)
                 {
-                    input_provider = new OblitaInterceptionInputProvider(this);
-                    input_provider.Load();
+                    try
+                    {
+                        input_provider = new OblitaInterceptionInputProvider(this);
+                        input_provider.Load();
 
-                    if (input_provider.IsLoaded)
-                        return true;
+                        if (input_provider.IsLoaded)
+                            return true;
+                    }
+                    catch (System.DllNotFoundException) 
+                    {
+                        // Instead of crashing everytime we start, reset the interception method to WinApi.
+                        // It would be better to give user a message as to why we didn't honor their request.
+                        Options.Instance.key_bindings.interception_method = KeyBindings.InterceptionMethod.WinApi;
+                    } 
                 }
 
                 input_provider = new WinApiInputProvider(this);

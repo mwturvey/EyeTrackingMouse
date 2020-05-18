@@ -41,7 +41,8 @@
             <TabItem Header="Key bindings">
                 <Grid>
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="14"></ColumnDefinition>
+                        <ColumnDefinition Width="102"/>
                         <ColumnDefinition Width="auto"></ColumnDefinition>
                         <ColumnDefinition Width="auto"></ColumnDefinition>
                         <ColumnDefinition Width="50"></ColumnDefinition>
@@ -65,62 +66,62 @@
                         <RowDefinition Height="auto"></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <TextBlock Grid.Row="0" Grid.Column="0">Enable mouse control</TextBlock>
-                    <Button Grid.Row="0" Grid.Column="1" Click="KeyBindingButtonClick" Name="EnableMouseControll">error</Button>
-                    <Button Grid.Row="0" Grid.Column="2" Click="KeyBindingButtonClick" Name="EnableMouseControllDefault">Default</Button>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">Enable mouse control</TextBlock>
+                    <Button Grid.Row="0" Grid.Column="2" Click="KeyBindingButtonClick" Name="EnableMouseControll">error</Button>
+                    <Button Grid.Row="0" Grid.Column="3" Click="KeyBindingButtonClick" Name="EnableMouseControllDefault">Default</Button>
 
-                    <TextBlock Grid.Row="1" Grid.Column="0">Left mouse button</TextBlock>
-                    <Button Grid.Row="1" Grid.Column="1" Click="KeyBindingButtonClick" Name="LeftMouseButton">error</Button>
-                    <Button Grid.Row="1" Grid.Column="2" Click="KeyBindingButtonClick" Name="LeftMouseButtonDefault">Default</Button>
+                    <TextBlock Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2">Left mouse button</TextBlock>
+                    <Button Grid.Row="1" Grid.Column="2" Click="KeyBindingButtonClick" Name="LeftMouseButton">error</Button>
+                    <Button Grid.Row="1" Grid.Column="3" Click="KeyBindingButtonClick" Name="LeftMouseButtonDefault">Default</Button>
 
-                    <TextBlock Grid.Row="2" Grid.Column="0">Right mouse button</TextBlock>
-                    <Button Grid.Row="2" Grid.Column="1" Click="KeyBindingButtonClick" Name="RightMouseButton">error</Button>
-                    <Button Grid.Row="2" Grid.Column="2" Click="KeyBindingButtonClick" Name="RightMouseButtonDefault">Default</Button>
+                    <TextBlock Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">Right mouse button</TextBlock>
+                    <Button Grid.Row="2" Grid.Column="2" Click="KeyBindingButtonClick" Name="RightMouseButton">error</Button>
+                    <Button Grid.Row="2" Grid.Column="3" Click="KeyBindingButtonClick" Name="RightMouseButtonDefault">Default</Button>
 
-                    <TextBlock Grid.Row="3" Grid.Column="0">Scroll down</TextBlock>
-                    <Button Grid.Row="3" Grid.Column="1" Click="KeyBindingButtonClick" Name="ScrollDown">error</Button>
-                    <Button Grid.Row="3" Grid.Column="2" Click="KeyBindingButtonClick" Name="ScrollDownDefault">Default</Button>
+                    <TextBlock Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2">Scroll down</TextBlock>
+                    <Button Grid.Row="3" Grid.Column="2" Click="KeyBindingButtonClick" Name="ScrollDown">error</Button>
+                    <Button Grid.Row="3" Grid.Column="3" Click="KeyBindingButtonClick" Name="ScrollDownDefault">Default</Button>
 
-                    <TextBlock Grid.Row="4" Grid.Column="0">Scroll up</TextBlock>
-                    <Button Grid.Row="4" Grid.Column="1" Click="KeyBindingButtonClick" Name="ScrollUp">error</Button>
-                    <Button Grid.Row="4" Grid.Column="2" Click="KeyBindingButtonClick" Name="ScrollUpDefault">Default</Button>
+                    <TextBlock Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2">Scroll up</TextBlock>
+                    <Button Grid.Row="4" Grid.Column="2" Click="KeyBindingButtonClick" Name="ScrollUp">error</Button>
+                    <Button Grid.Row="4" Grid.Column="3" Click="KeyBindingButtonClick" Name="ScrollUpDefault">Default</Button>
 
-                    <TextBlock Grid.Row="5" Grid.Column="0">Scroll left</TextBlock>
-                    <Button Grid.Row="5" Grid.Column="1" Click="KeyBindingButtonClick" Name="ScrollLeft">error</Button>
-                    <Button Grid.Row="5" Grid.Column="2" Click="KeyBindingButtonClick" Name="ScrollLeftDefault">Default</Button>
+                    <TextBlock Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2">Scroll left</TextBlock>
+                    <Button Grid.Row="5" Grid.Column="2" Click="KeyBindingButtonClick" Name="ScrollLeft">error</Button>
+                    <Button Grid.Row="5" Grid.Column="3" Click="KeyBindingButtonClick" Name="ScrollLeftDefault">Default</Button>
 
-                    <TextBlock Grid.Row="6" Grid.Column="0">Scroll right</TextBlock>
-                    <Button Grid.Row="6" Grid.Column="1" Click="KeyBindingButtonClick" Name="ScrollRight">error</Button>
-                    <Button Grid.Row="6" Grid.Column="2" Click="KeyBindingButtonClick" Name="ScrollRightDefault">Default</Button>
+                    <TextBlock Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2">Scroll right</TextBlock>
+                    <Button Grid.Row="6" Grid.Column="2" Click="KeyBindingButtonClick" Name="ScrollRight">error</Button>
+                    <Button Grid.Row="6" Grid.Column="3" Click="KeyBindingButtonClick" Name="ScrollRightDefault">Default</Button>
 
-                    <TextBlock Grid.Row="7" Grid.Column="0">Calibrate up</TextBlock>
-                    <Button Grid.Row="7" Grid.Column="1" Click="KeyBindingButtonClick" Name="CalibrateUp">error</Button>
-                    <Button Grid.Row="7" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrateUpDefault">Default</Button>
+                    <TextBlock Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2">Calibrate up</TextBlock>
+                    <Button Grid.Row="7" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrateUp">error</Button>
+                    <Button Grid.Row="7" Grid.Column="3" Click="KeyBindingButtonClick" Name="CalibrateUpDefault">Default</Button>
 
-                    <TextBlock Grid.Row="8" Grid.Column="0">Calibrate down</TextBlock>
-                    <Button Grid.Row="8" Grid.Column="1" Click="KeyBindingButtonClick" Name="CalibrateDown">error</Button>
-                    <Button Grid.Row="8" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrateDownDefault">Default</Button>
+                    <TextBlock Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2">Calibrate down</TextBlock>
+                    <Button Grid.Row="8" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrateDown">error</Button>
+                    <Button Grid.Row="8" Grid.Column="3" Click="KeyBindingButtonClick" Name="CalibrateDownDefault">Default</Button>
 
-                    <TextBlock Grid.Row="9" Grid.Column="0">Calibrate left</TextBlock>
-                    <Button Grid.Row="9" Grid.Column="1" Click="KeyBindingButtonClick" Name="CalibrateLeft">error</Button>
-                    <Button Grid.Row="9" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrateLeftDefault">Default</Button>
+                    <TextBlock Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2">Calibrate left</TextBlock>
+                    <Button Grid.Row="9" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrateLeft">error</Button>
+                    <Button Grid.Row="9" Grid.Column="3" Click="KeyBindingButtonClick" Name="CalibrateLeftDefault">Default</Button>
 
-                    <TextBlock Grid.Row="10" Grid.Column="0">Calibrate right</TextBlock>
-                    <Button Grid.Row="10" Grid.Column="1" Click="KeyBindingButtonClick" Name="CalibrateRigth">error</Button>
-                    <Button Grid.Row="10" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrateRigthDefault">Default</Button>
+                    <TextBlock Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2">Calibrate right</TextBlock>
+                    <Button Grid.Row="10" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrateRigth">error</Button>
+                    <Button Grid.Row="10" Grid.Column="3" Click="KeyBindingButtonClick" Name="CalibrateRigthDefault">Default</Button>
 
-                    <TextBlock Grid.Row="11" Grid.Column="0">Calibration view</TextBlock>
-                    <Button Grid.Row="11" Grid.Column="1" Click="KeyBindingButtonClick" Name="CalibrationView">error</Button>
-                    <Button Grid.Row="11" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrationViewDefault">Default</Button>
+                    <TextBlock Grid.Row="11" Grid.Column="0" Grid.ColumnSpan="2">Calibration view</TextBlock>
+                    <Button Grid.Row="11" Grid.Column="2" Click="KeyBindingButtonClick" Name="CalibrationView">error</Button>
+                    <Button Grid.Row="11" Grid.Column="3" Click="KeyBindingButtonClick" Name="CalibrationViewDefault">Default</Button>
 
-                    <Button Grid.Row="0" Grid.Column="4" Click="ResetEverything_Click" Name="ResetEverything" >Reset all bindings to defaults</Button>
-                    <TextBlock Grid.Row="2" Grid.Column="4">Key interception backend:</TextBlock>
-                    <ComboBox Grid.Row="3" Grid.Column="4" SelectionChanged="InterceptionMethod_Selected" SelectedIndex="0" Name ="InterceptionMethod">
+                    <Button Grid.Row="0" Grid.Column="5" Click="ResetEverything_Click" Name="ResetEverything" Margin="0,0,1,0" >Reset all bindings to defaults</Button>
+                    <TextBlock Grid.Row="2" Grid.Column="5" Margin="0,0,1,0">Key interception backend:</TextBlock>
+                    <ComboBox Grid.Row="3" Grid.Column="5" SelectionChanged="InterceptionMethod_Selected" SelectedIndex="0" Name ="InterceptionMethod" Margin="0,0,1,0">
                         <ComboBoxItem>Raw WinAPI keyboard hooks</ComboBoxItem>
                         <ComboBoxItem>Oblita Interception Driver</ComboBoxItem>
                     </ComboBox>
 
-                    <TextBlock Name="WinApiWarning" Grid.Row="5" Grid.RowSpan="4" Grid.Column="4" Grid.ColumnSpan="2">
+                    <TextBlock Name="WinApiWarning" Grid.Row="5" Grid.RowSpan="4" Grid.Column="5" Grid.ColumnSpan="2">
                         Custom key bindings are not available <LineBreak></LineBreak>
                         if using keyboard hooks backend.<LineBreak></LineBreak>
                         Please use Oblita Interception Driver<LineBreak></LineBreak> 
@@ -133,7 +134,8 @@
             <TabItem Header="Advancced" >
                 <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="auto"></ColumnDefinition>
+                        <ColumnDefinition Width="82"></ColumnDefinition>
+                        <ColumnDefinition Width="Auto"/>
                         <ColumnDefinition Width="20"></ColumnDefinition>
                         <ColumnDefinition ></ColumnDefinition>
                         <ColumnDefinition ></ColumnDefinition>
@@ -157,84 +159,108 @@
                     </Grid.RowDefinitions>
 
                     <local:IntegerPropertyControl 
-                        Grid.Row="1" Grid.ColumnSpan="4" 
+                        Grid.Row="1" Grid.ColumnSpan="5" 
                         x:Name="VerticalScrollStep" 
                         Label="Vertical scroll step"
                         Maximum="15" Minimum="1"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
 
                     <local:IntegerPropertyControl 
-                        Grid.Row="2" Grid.ColumnSpan="4" 
+                        Grid.Row="2" Grid.ColumnSpan="5" 
                         x:Name="HorizontalScrollStep" 
                         Label="Horizontal scroll step"
                         Maximum="15" Minimum="1"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                    
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
                     <local:IntegerPropertyControl 
-                        Grid.Row="3" Grid.ColumnSpan="4" 
+                        Grid.Row="3" Grid.ColumnSpan="5" 
                         x:Name="CalibrationStep" 
                         Label="Calibration step in pixels"
                         Maximum="15" Minimum="0"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                    
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
                     <local:IntegerPropertyControl 
-                        Grid.Row="4" Grid.ColumnSpan="4" 
+                        Grid.Row="4" Grid.ColumnSpan="5" 
                         x:Name="ClickFreezeTimeMs" 
                         Label="Click freeze time (ms)"
                         Maximum="1000" Minimum="0"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                    
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
                     <local:IntegerPropertyControl 
-                        Grid.Row="5" Grid.ColumnSpan="4" 
+                        Grid.Row="5" Grid.ColumnSpan="5" 
                         x:Name="CalibrationFreezeTimeMs" 
                         Label="Calibration freeze time (ms)"
                         Maximum="2000" Minimum="0"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                    
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
                     <local:IntegerPropertyControl 
-                        Grid.Row="6" Grid.ColumnSpan="4" 
+                        Grid.Row="6" Grid.ColumnSpan="5" 
                         x:Name="DoubleSpeedUpTimeMs" 
                         Label="Double speed-up time (ms)"
                         Maximum="500" Minimum="0"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
                     <local:IntegerPropertyControl 
-                        Grid.Row="7" Grid.ColumnSpan="4" 
+                        Grid.Row="7" Grid.ColumnSpan="5" 
                         x:Name="QuadrupleSpeedUpTimeMs" 
                         Label="Quadruple speed-up time (ms)"
                         Maximum="500" Minimum="0"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                    
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
                     <local:IntegerPropertyControl 
-                        Grid.Row="8" Grid.ColumnSpan="4" 
+                        Grid.Row="8" Grid.ColumnSpan="5" 
                         x:Name="ModifierShortPressTimeMs" 
                         Label="Modifier short press time (ms)"
                         Maximum="1000" Minimum="0"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                    
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
                     <local:IntegerPropertyControl 
-                        Grid.Row="9" Grid.ColumnSpan="4" 
+                        Grid.Row="9" Grid.ColumnSpan="5" 
                         x:Name="SmootheningPointsCount" 
                         Label="Smoothening points count"
                         Maximum="200" Minimum="1"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                    
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
                     <local:IntegerPropertyControl 
-                        Grid.Row="10" Grid.ColumnSpan="4" 
+                        Grid.Row="10" Grid.ColumnSpan="5" 
                         x:Name="SmotheningZoneRadius" 
                         Label="Smoothening zone radius in pixels "
                         Maximum="1000" Minimum="1"
-                        ValueChanged="Slider_ValueChanged"></local:IntegerPropertyControl>
-                    
-                    <TextBlock Grid.Row="11" Grid.Column="0" Name="CalibrationModeLabel">Calibration mode</TextBlock>
-                    <ComboBox Grid.Row="11" Grid.Column="2" x:Name="CalibrationModeCombo" SelectionChanged="CalibrationModeCombo_SelectionChanged">
+                        ValueChanged="Slider_ValueChanged" Margin="0,0,0.263,0"></local:IntegerPropertyControl>
+
+                    <TextBlock Grid.Row="11" Grid.Column="0" Name="CalibrationModeLabel" Grid.ColumnSpan="2">Calibration mode</TextBlock>
+                    <ComboBox Grid.Row="11" Grid.Column="3" x:Name="CalibrationModeCombo" SelectionChanged="CalibrationModeCombo_SelectionChanged">
                         <ComboBoxItem>Multidimensional</ComboBoxItem>
                         <ComboBoxItem>Simple &amp; Fast</ComboBoxItem>
-                        <ComboBoxItem Name="CustomCalibrationMode"> Custom</ComboBoxItem>
+                        <ComboBoxItem Name="CustomCalibrationMode">Custom</ComboBoxItem>
                     </ComboBox>
-                    <Button Grid.Row="11" Grid.Column="3" Grid.ColumnSpan="2" x:Name="AdvancedCalibrationSettings" Click="AdvancedCalibrationSettings_Click">Advanced calibration settings</Button>
+                    <Button Grid.Row="11" Grid.Column="4" x:Name="AdvancedCalibrationSettings" Click="AdvancedCalibrationSettings_Click" Margin="0,0,0.263,0">Advanced calibration settings</Button>
 
-                    <Button Grid.Row="13" Grid.Column="2" Grid.ColumnSpan="1" Name="ResetDefaults" Click="ResetDefaults_Click">Reset to defaults</Button>
+                    <Button Grid.Row="13" Grid.Column="3" Grid.ColumnSpan="1" Name="ResetDefaults" Click="ResetDefaults_Click">Reset to defaults</Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Always On" >
+                <Grid Margin="0,0,128,203">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="22"></ColumnDefinition>
+                        <ColumnDefinition Width="102"/>
+                        <ColumnDefinition Width="57"/>
+                        <ColumnDefinition Width="229"/>
+                        <ColumnDefinition Width="20"></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                        <ColumnDefinition ></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="20"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <CheckBox Grid.Row="1" Grid.Column="1" Name ="EnableAlwaysOn" IsChecked="False" Grid.ColumnSpan="3" Checked="AlwaysOn_ValueChanged" Unchecked="AlwaysOn_ValueChanged"  >
+                        Enable Always On (mouse will continuously be controlled by eyegaze)
+                    </CheckBox>
                 </Grid>
             </TabItem>
         </TabControl>

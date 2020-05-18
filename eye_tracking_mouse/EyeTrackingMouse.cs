@@ -137,7 +137,11 @@ namespace eye_tracking_mouse
                         input_provider.SendModifierUp();
                         handled = true;
                     }
-                    StopControlling();
+
+                    if (!Options.Instance.is_always_on)
+                    {
+                        StopControlling();
+                    }
                     return handled;
                 }
             }
@@ -270,10 +274,27 @@ namespace eye_tracking_mouse
 
             return true;
         }
-       
+
+        public void handleChangedOptions(object sender, EventArgs args)
+        {
+            if (Options.Instance.is_always_on
+                && mouse_state == MouseState.Idle)
+            {
+                StartControlling();
+            } else if (!Options.Instance.is_always_on
+                && mouse_state == MouseState.Controlling)
+            {
+                StopControlling(); // this could still fire while the modifier key is depressed, but that's probably okay.
+            }
+
+        }
+
+
         public EyeTrackingMouse()
         {
             tobii_coordinates_provider = new TobiiCoordinatesProvider(OnNewCoordinates);
+
+            Options.Changed += handleChangedOptions;
         }
 
         public void Dispose()

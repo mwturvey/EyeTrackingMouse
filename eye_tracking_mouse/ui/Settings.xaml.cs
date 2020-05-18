@@ -40,7 +40,7 @@ namespace eye_tracking_mouse
 
                 CheckboxAutostart.IsChecked = Autostart.IsEnabled;
 
-                UpdateSliders();
+                InitializeSettings();
             }
         }
 
@@ -140,7 +140,7 @@ namespace eye_tracking_mouse
             System.Diagnostics.Process.Start(e.Uri.AbsoluteUri);
         }
 
-        private void UpdateSliders()
+        private void InitializeSettings()
         {
             lock (Helpers.locker)
             {
@@ -176,6 +176,9 @@ namespace eye_tracking_mouse
                     CustomCalibrationMode.Visibility = Visibility.Visible;
                     CalibrationModeCombo.SelectedIndex = 2;
                 }
+
+                EnableAlwaysOn.IsChecked = Options.Instance.is_always_on;
+
                 is_initialized = true;
             }
         }
@@ -186,7 +189,7 @@ namespace eye_tracking_mouse
                 return;
             lock (Helpers.locker)
             {
-                // TODO: test sliders with dinamic minimum and maximum.
+                // TODO: test sliders with dynamic minimum and maximum.
 
                 if (sender == SmotheningZoneRadius)
                 {
@@ -235,6 +238,24 @@ namespace eye_tracking_mouse
             }
         }
 
+        private void AlwaysOn_ValueChanged(object sender, RoutedEventArgs e)
+        {
+            if (!is_initialized)
+                return;
+            lock (Helpers.locker)
+            {
+                // TODO: test sliders with dinamic minimum and maximum.
+
+                if (sender == EnableAlwaysOn)
+                {
+                    Options.Instance.is_always_on = EnableAlwaysOn.IsChecked == true ? true : false;
+                }
+
+                Options.Changed?.Invoke(this, new EventArgs());
+                Options.Instance.SaveToFile(Options.Filepath);
+            }
+        }
+
         private void UpdateSpeedUpControllersMinMax()
         {
             DoubleSpeedUpTimeMs.Minimum = (int)QuadrupleSpeedUpTimeMs.Value;
@@ -257,7 +278,7 @@ namespace eye_tracking_mouse
                     Options.Changed?.Invoke(this, new EventArgs());
 
                     Options.Instance.SaveToFile(Options.Filepath);
-                    UpdateSliders();
+                    InitializeSettings();
                 }
             }
         }
@@ -463,7 +484,7 @@ namespace eye_tracking_mouse
         {
             CalibrationSettings calibration_settings = new CalibrationSettings();
             calibration_settings.ShowDialog();
-            UpdateSliders();
+            InitializeSettings();
         }
 
         private void CheckboxAutostart_Checked(object sender, RoutedEventArgs e)
